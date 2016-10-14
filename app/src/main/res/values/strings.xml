@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Bipper2</string>
+    <string name="message">Veuillez saisir vos informqtions</string>
+    <string name="hint_nom">Votre nom</string>
 </resources>
