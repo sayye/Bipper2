@@ -12,4 +12,5 @@
     <string name="hint_help">Veuillez sélectionner &quot;s&apos;enregistrer&quot; pour créer un compte ou &quot;se connecter&quot; si vous avez déjà un.</string>
     <string name="hint_signin">S\&apos;enregistrer</string>
     <string name="hint_register">Se connecter</string>
+    <string name="hint_img_desc_logo">Logo</string>
 </resources>
