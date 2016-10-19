@@ -27,12 +27,106 @@
         android:ems="10"
         android:drawablePadding="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:id="@+id/editText"
+        android:id="@+id/editTextNom"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:drawableLeft="@drawable/ic_account_circle_black_18dp" />
 
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/hint_prenom"
+        android:ems="10"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="14dp"
+        android:drawableLeft="@drawable/ic_account_circle_black_18dp"
+        android:id="@+id/editTextPrenom"
+        android:layout_below="@+id/editTextNom"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:text="Masculin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPrenom"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp"
+        android:id="@+id/radioButtonM" />
+
+    <RadioButton
+        android:text="Feminin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="34dp"
+        android:id="@+id/radioButtonF"
+        android:layout_alignBaseline="@+id/radioButtonM"
+        android:layout_alignBottom="@+id/radioButtonM"
+        android:layout_alignParentEnd="true" />
 
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/hint_tel"
+        android:ems="10"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="14dp"
+        android:drawableLeft="@drawable/ic_settings_cell_black_18dp"
+        android:id="@+id/editTextTel"
+        android:layout_below="@+id/radioButtonM"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/hint_mail"
+        android:ems="10"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="14dp"
+        android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+        android:id="@+id/editTextMail"
+        android:layout_below="@+id/editTextTel"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/hint_pwd"
+        android:ems="10"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:drawableLeft="@drawable/ic_https_black_18dp"
+        android:id="@+id/editTextPwd"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/editTextMail"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/hint_confpwd"
+        android:ems="10"
+        android:drawablePadding="@dimen/activity_horizontal_margin"
+        android:drawableLeft="@drawable/ic_https_black_18dp"
+        android:id="@+id/editTextconfpwd"
+        android:layout_below="@+id/editTextPwd"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="19dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/button"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+         />
 </RelativeLayout>
