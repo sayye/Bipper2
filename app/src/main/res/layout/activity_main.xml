@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/logo"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/hint_img_desc_logo"
          />
 
     <TextView
@@ -53,7 +54,7 @@
         android:layout_below="@+id/help"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/default_margin"
-        android:background="@color/default_color"
+        android:background="@drawable/mybutton"
         android:textColor="@color/default_inverse_color"
         />
 
