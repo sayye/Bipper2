@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,8 +11,61 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="che.sai.android.mbds.fr.bipper2.MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        app:srcCompat="@drawable/logo"
+        android:layout_centerHorizontal="true"
+         />
+
+    <TextView
+        android:id="@+id/bienvenue"
+        android:text="@string/hint_bienvenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/default_color"
+        android:textSize="@dimen/text_title_default_size"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_margin" />
+
+    <TextView
+        android:id="@+id/help"
+        android:text="@string/hint_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/default_color"
+        android:layout_below="@+id/bienvenue"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:textSize="@dimen/text_default_size"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/signin"
+        android:text="@string/hint_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/help"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@color/default_color"
+        android:textColor="@color/default_inverse_color"
+        />
+
+    <Button
+        android:id="@+id/register"
+        android:text="@string/hint_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin"
+        android:layout_alignEnd="@+id/signin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@color/default_color"
+        android:textColor="@color/default_inverse_color"
+         />
 </RelativeLayout>

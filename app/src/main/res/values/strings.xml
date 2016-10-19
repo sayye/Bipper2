@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Bipper2</string>
-    <string name="message">Veuillez saisir vos informations</string>
+    <string name="message">Veuillez saisir vos informqtions</string>
     <string name="hint_nom">Votre nom</string>
     <string name="hint_prenom">Votre prenom</string>
     <string name="hint_tel">Votre telephone</string>
@@ -8,4 +8,8 @@
     <string name="hint_pwd">Votre mot de passe</string>
     <string name="hint_confpwd">Confirmer votre mot de passe</string>
     <string name="hint_mail">Votre mail</string>
+    <string name="hint_bienvenue">Bienvenue</string>
+    <string name="hint_help">Veuillez sélectionner &quot;s&apos;enregistrer&quot; pour créer un compte ou &quot;se connecter&quot; si vous avez déjà un.</string>
+    <string name="hint_signin">S\&apos;enregistrer</string>
+    <string name="hint_register">Se connecter</string>
 </resources>
