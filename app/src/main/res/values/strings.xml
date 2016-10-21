@@ -13,4 +13,6 @@
     <string name="hint_signin">S\&apos;enregistrer</string>
     <string name="hint_register">Se connecter</string>
     <string name="hint_img_desc_logo">Logo</string>
+    <string name="please_wait">Merci de patienter</string>
+    <string name="inscription_ok">Inscription validée</string>
 </resources>
