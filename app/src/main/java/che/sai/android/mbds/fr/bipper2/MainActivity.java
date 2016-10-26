@@ -25,13 +25,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Intent intent=null;
         switch (v.getId()){
             case R.id.signin:
-
+                intent = new Intent(this,LoginActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.register:
-                Intent intent = new Intent(this,RegisterActivity.class);
+                intent = new Intent(this,RegisterActivity.class);
                 startActivity(intent);
                 break;
         }
