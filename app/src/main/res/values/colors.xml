@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="default_color">@android:color/holo_blue_dark</color>
     <color name="default_inverse_color">@android:color/white</color>
+    <color name="default_inverse_color2">@android:color/white</color>
+    <color name="default_inverse_color1">@android:color/white</color>
 </resources>
