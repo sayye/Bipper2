@@ -5,13 +5,14 @@ import java.io.Serializable;
 /**
  * Created by sai on 10/26/16.
  */
-
+// Serializable  ???
 public class Login  implements Serializable {
     private Person person=null;
     private String email=null;
     private String password=null;
     private String message=null;
     private Boolean success=false;
+
 
     public Login() {
     }

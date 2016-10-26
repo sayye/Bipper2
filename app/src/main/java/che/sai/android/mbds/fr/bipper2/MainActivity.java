@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.register).setOnClickListener(this);
 
     }
-
+    // Intent
     @Override
     public void onClick(View v) {
         Intent intent=null;
