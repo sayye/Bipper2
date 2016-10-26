@@ -75,7 +75,7 @@ class RegisterTask extends AsyncTask<Person,Void,Person> {
             obj.put("nom", person.getNom());
             obj.put("sexe", person.getSexe());
             obj.put("telephone", person.getTelephone());
-            obj.put("mail", person.getEmail());
+            obj.put("email", person.getEmail());
             obj.put("createdby", person.getCreatedBy());
             obj.put("password", person.getPassword());
             // SM ORI: obj.toJSONString() obj.toString()
