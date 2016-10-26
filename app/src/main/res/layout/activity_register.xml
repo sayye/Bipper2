@@ -111,6 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:id="@+id/register"
+        android:text="@string/hint_enregistrer"
         android:textColor="@android:color/holo_blue_dark"
         android:background="@android:color/holo_blue_bright"
         android:layout_alignParentStart="true"
