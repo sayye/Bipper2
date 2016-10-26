@@ -327,7 +327,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 HttpPost post = new HttpPost(url);
                 post.setHeader("Content-Type", "application/json");
                 JSONObject obj = new JSONObject();
-                obj.put("email",login.getEmail());
+                obj.put("mail",login.getEmail());
                 obj.put("password", login.getPassword());
                 StringEntity entity = new StringEntity(obj.toString());
                 post.setEntity(entity);
