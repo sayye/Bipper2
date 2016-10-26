@@ -28,6 +28,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -380,9 +381,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
             if (login.getSuccess()) {
                 finish();
+                Toast.makeText(LoginActivity.this, R.string.login_ok, Toast.LENGTH_LONG).show();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
+                Toast.makeText(LoginActivity.this, login.getMessage(), Toast.LENGTH_LONG).show();
             }
         }
 
