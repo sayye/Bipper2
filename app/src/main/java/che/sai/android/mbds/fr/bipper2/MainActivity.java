@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //recuperer les boutons
-       Button signin = (Button)findViewById(R.id.signin);
-        Button register = (Button)findViewById(R.id.register);
+      // Button signin = (Button)findViewById(R.id.signin);
+       // Button register = (Button)findViewById(R.id.register);
 
         //evenements click des bontons
         findViewById(R.id.signin).setOnClickListener(this);
