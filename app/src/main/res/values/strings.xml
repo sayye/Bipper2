@@ -30,4 +30,7 @@
         completions."
     </string>
     <string name="login_ok">Connection validée</string>
+    <string name="txt_buzz">Buzzer</string>
+    <string name="status_connected">Connecté</string>
+    <string name="status_not_connected">Pas connecté</string>
 </resources>

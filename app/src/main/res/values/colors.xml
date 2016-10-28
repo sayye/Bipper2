@@ -7,4 +7,7 @@
     <color name="default_inverse_color">@android:color/white</color>
     <color name="default_inverse_color2">@android:color/white</color>
     <color name="default_inverse_color1">@android:color/white</color>
+    <color name="color_buzz_not_connected">#ff4050</color>
+    <color name="color_buzz_delete">#50ff40</color>
+    <color name="color_buzz_connected">#50ff40</color>
 </resources>
