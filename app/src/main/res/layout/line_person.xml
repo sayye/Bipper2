@@ -42,7 +42,7 @@
         android:drawableBottom="@drawable/ic_remove_white_18dp"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/button" />
+        android:id="@+id/deleteBtn" />
 
 
 </RelativeLayout>

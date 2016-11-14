@@ -1,6 +1,10 @@
 package che.sai.android.mbds.fr.bipper2;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.support.design.widget.TabLayout;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +56,7 @@ public class PersonItemAdapter extends BaseAdapter {
             viewHolder = new PersonViewHolder();
             viewHolder.nom_prenom= (TextView)v.findViewById(R.id.txt_nom_prenom);
             viewHolder.status= (TextView)v.findViewById(R.id.txt_connected);
+            viewHolder.buzzBtn= (TextView)v.findViewById(R.id.txt_buzz);
             v.setTag(viewHolder);
         } else{
             viewHolder = (PersonViewHolder) v.getTag();
@@ -61,10 +66,17 @@ public class PersonItemAdapter extends BaseAdapter {
 
         if(person.isConnected()){
             viewHolder.status.setText(R.string.status_connected);
-            //viewHolder.buzzBtn.setBackgroundColor(R.color.color_buzz_connected);
+            viewHolder.buzzBtn.setBackgroundColor(context.getColor(R.color.color_buzz_connected));
+
+            //ICI A FAIRE CHANGER LA COULEUR
+            // viewHolder.buzzBtn.setCompoundDrawables(null,context.getDrawable(R.drawable.buzz_button),null,null);
+
         }else{
             viewHolder.status.setText(R.string.status_not_connected);
             //viewHolder.buzzBtn.setBackgroundColor(R.color.color_buzz_not_connected);
+            //viewHolder.buzzBtn.setBackgroundResource(R.color.color_buzz_not_connected);
+            //viewHolder.buzzBtn.setBackgroundColor();
+            viewHolder.buzzBtn.setBackgroundColor(context.getColor(R.color.color_buzz_not_connected));
         }
         viewHolder.nom_prenom.setText(person.getNom() +" " + person.getPrenom());
 
@@ -75,6 +87,6 @@ public class PersonItemAdapter extends BaseAdapter {
         TextView nom_prenom;
         TextView status;
         Button deleteBtn;
-        Button buzzBtn;
+        TextView buzzBtn;
     }
 }
