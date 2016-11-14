@@ -3,6 +3,7 @@ package che.sai.android.mbds.fr.bipper2;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -44,6 +45,7 @@ import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
+import che.sai.android.mbds.fr.bipper2.UserActivity;
 /**
  * A login screen that offers login via email/password.
  */
@@ -382,6 +384,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             if (login.getSuccess()) {
                 finish();
                 Toast.makeText(LoginActivity.this, R.string.login_ok, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(LoginActivity.this,UserActivity.class);
+                startActivity(intent);
+
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();

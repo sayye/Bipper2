@@ -1,6 +1,7 @@
 package che.sai.android.mbds.fr.bipper2;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -42,7 +43,12 @@ public class PersonItemAdapter extends BaseAdapter {
         View v = convertView;
         PersonViewHolder viewHolder = null;
         if(v==null){
-            v = View.inflate(context, R.layout.line_person, null);
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            v = inflater.inflate(R.layout.line_person, parent, false);
+
+
+            //v = View.inflate(context, R.layout.line_person, null);
             viewHolder = new PersonViewHolder();
             viewHolder.nom_prenom= (TextView)v.findViewById(R.id.txt_nom_prenom);
             viewHolder.status= (TextView)v.findViewById(R.id.txt_connected);
