@@ -2,14 +2,17 @@ package che.sai.android.mbds.fr.bipper2;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -22,13 +25,30 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity implements View.OnClickListener{
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
+
         new UserTask().execute();
+        //
+       // findViewById(R.id.deleteBtn).setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        //v.getTag()
+        if (v.getId()==R.id.deleteBtn){
+            new UserTaskDelete().execute((String) v.getTag());
+        }
+
     }
 
     class UserTask extends AsyncTask< Void,Void,List<Person> > {
@@ -98,7 +118,7 @@ public class UserActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(List<Person> personList) {
             super.onPostExecute(personList);
-            PersonItemAdapter personItemAdapter = new PersonItemAdapter(UserActivity.this,personList);
+            PersonItemAdapter personItemAdapter = new PersonItemAdapter(UserActivity.this,personList, UserActivity.this);
             ListView listView = (ListView) findViewById(R.id.listView);
             listView.setAdapter(personItemAdapter);
 
@@ -112,6 +132,55 @@ public class UserActivity extends AppCompatActivity {
         }
     }
 
+
+
+    class UserTaskDelete extends AsyncTask< String,Void,Void > {
+
+        @Override
+        protected Void doInBackground(String... ids) {
+            try {
+                //Integer
+                String id = ids[0];
+
+                String url = "http://95.142.161.35:1337/person/"+id;
+                HttpClient client = new DefaultHttpClient();
+                HttpDelete httpDelete = new HttpDelete(url);
+                httpDelete.setHeader("Content-Type", "application/json");
+                HttpResponse response = client.execute(httpDelete);
+                BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+
+            } catch (Exception e) {
+
+            }
+            return null;
+        }
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            showProgressDialog(true);
+        }
+
+        @Override
+        protected void onPostExecute(Void param) {
+            super.onPostExecute(param);
+            //PersonItemAdapter personItemAdapter = new PersonItemAdapter(UserActivity.this,personList);
+            //personItemAdapter.person.remove(pos);
+            //ListView listView = (ListView) findViewById(R.id.listView);
+
+            //listView.setAdapter(personItemAdapter);
+            new UserTask().execute();
+
+        }
+
+
+        ProgressDialog progressDialog;
+
+        public void showProgressDialog(boolean isVisible) {
+
+        }
+    }
 
 
 }

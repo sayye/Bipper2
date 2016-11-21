@@ -21,8 +21,10 @@ import java.util.List;
 public class PersonItemAdapter extends BaseAdapter {
     private Context context;
     public List<Person> person;
+    View.OnClickListener listener;
 
-    public PersonItemAdapter(Context context, List<Person> person) {
+    public PersonItemAdapter(Context context, List<Person> person, View.OnClickListener listener) {
+        this.listener = listener;
         this.context = context;
         this.person = person;
     }
@@ -57,6 +59,7 @@ public class PersonItemAdapter extends BaseAdapter {
             viewHolder.nom_prenom= (TextView)v.findViewById(R.id.txt_nom_prenom);
             viewHolder.status= (TextView)v.findViewById(R.id.txt_connected);
             viewHolder.buzzBtn= (TextView)v.findViewById(R.id.txt_buzz);
+            viewHolder.deleteBtn= (Button) v.findViewById(R.id.deleteBtn);
             v.setTag(viewHolder);
         } else{
             viewHolder = (PersonViewHolder) v.getTag();
@@ -79,6 +82,8 @@ public class PersonItemAdapter extends BaseAdapter {
             viewHolder.buzzBtn.setBackgroundColor(context.getColor(R.color.color_buzz_not_connected));
         }
         viewHolder.nom_prenom.setText(person.getNom() +" " + person.getPrenom());
+        viewHolder.deleteBtn.setOnClickListener(listener);
+        viewHolder.deleteBtn.setTag(person.getId());
 
         return v;
     }
